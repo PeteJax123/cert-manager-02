@@ -1,11 +1,3 @@
 installCRDs: true
-validatingWebhookConfigurationNamespaceSelector:
-  matchExpressions:
-    - key: control-plane
-      operator: NotIn
-      values:
-        - 'true'
-    - key: kubernetes.azure.com/managedby
-      operator: NotIn
-      values:
-        - aks
+validatingWebhookConfigurationAnnotations:
+    admissions.enforcer/disabled: "true"
