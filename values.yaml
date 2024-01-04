@@ -1,4 +1,4 @@
 installCRDs: true
-webhook:
-    validatingWebhookConfigurationAnnotations:
+cert-manager:
+    commonAnnotations:
         admissions.enforcer/disabled: "true"
